@@ -31,6 +31,5 @@ Google Ads
 - `gam_attr_daily`: receita por attr ID.
 - `gam_content_daily`: receita por bloco/conteudo.
 - `google_ads_campaign_settings_daily`: configuracoes de campanhas e grupos.
-- `nexus_agent_events` ou equivalente: eventos dos agentes.
+- `kaizen_agent_events` ou equivalente: eventos dos agentes.
 - `operational_health_events`: saude operacional.
-
