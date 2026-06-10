@@ -1,6 +1,6 @@
 fastapi
 uvicorn
+flask
 pyyaml
 requests
 google-ads
-

@@ -1,0 +1,40 @@
+app:
+  name: "Kaizen"
+  base_url: "https://seu-dominio.com"
+  timezone: "America/Sao_Paulo"
+  api_token: "TROQUE_ESTE_TOKEN"
+  database_path: "roas_cache.sqlite3"
+
+google_ads:
+  developer_token: "COLOQUE_AQUI"
+  client_id: "COLOQUE_AQUI"
+  client_secret: "COLOQUE_AQUI"
+  refresh_token: "COLOQUE_AQUI"
+  login_customer_id: "0000000000"
+  api_version: "v23"
+  customers:
+    - customer_id: "0000000000"
+      name: "exemplo.com | PAIS"
+      site: "exemplo.com"
+
+gam:
+  networks:
+    - network_code: "00000000000"
+      name: "Exemplo GAM"
+      site: "exemplo.com"
+      currency: "BRL"
+
+projects:
+  - site: "exemplo.com"
+    google_ads_customer_id: "0000000000"
+    gam_network_code: "00000000000"
+
+agents:
+  enabled: true
+  timezone: "America/Sao_Paulo"
+  telegram_enabled: false
+
+rules:
+  floor_automation_enabled: false
+  never_rewrite_utm: true
+  require_test_after_implementation: true

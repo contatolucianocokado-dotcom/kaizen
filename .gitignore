@@ -16,4 +16,11 @@ secret*
 backup*
 __pycache__/
 .venv/
-
+config.yaml
+.env
+roas_cache.sqlite3
+*.sqlite3
+*.db
+__pycache__/
+*.pyc
+.venv/

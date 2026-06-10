@@ -1,0 +1,9 @@
+app:
+  base_url: "https://demo.kaizen.local"
+  timezone: "America/Sao_Paulo"
+  api_token: "demo-token"
+
+projects:
+  - site: "demo-site.com"
+    google_ads_customer_id: "1234567890"
+    gam_network_code: "123456789"
