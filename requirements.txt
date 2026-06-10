@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+pyyaml
+requests
+google-ads
+

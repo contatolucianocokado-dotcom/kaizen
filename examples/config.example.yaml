@@ -1,0 +1,28 @@
+app:
+  base_url: "https://app.seudominio.com"
+  timezone: "America/Sao_Paulo"
+
+google_ads:
+  developer_token: "REDACTED"
+  client_id: "REDACTED"
+  client_secret: "REDACTED"
+  refresh_token: "REDACTED"
+  login_customer_id: "0000000000"
+  customers:
+    - customer_id: "0000000000"
+      name: "site.com | PAIS"
+      site: "site.com"
+
+gam:
+  networks:
+    - network_code: "00000000000"
+      name: "GAM Site"
+      site: "site.com"
+      currency: "BRL"
+
+site_mapping:
+  site.com: site.com
+
+dashboard_projects:
+  - site.com
+
