@@ -21,11 +21,15 @@ cp .env.example .env
 
 ## 3. Configurar
 
+Leia tambem `docs/01-SETUP-INICIAL.md` para configurar o fluxo completo de Google Ads, GA4, GTM, WordPress/WPCode e Clarity.
+
 Edite `config.yaml` e troque:
 
 - Dominio do app.
 - Token interno.
-- Google Ads OAuth.
+- OAuth completo: Google Ads, GAM, GA4 e GTM.
+- Conta GTM e conta GA4 mae.
+- Clarity Project ID e Data Export API Token, quando existirem.
 - Contas Google Ads.
 - Networks GAM.
 - Projetos.

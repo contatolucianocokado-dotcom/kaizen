@@ -38,3 +38,22 @@ rules:
   floor_automation_enabled: false
   never_rewrite_utm: true
   require_test_after_implementation: true
+
+setup_inicial:
+  enabled: true
+  oauth_required_scopes:
+    - "https://www.googleapis.com/auth/adwords"
+    - "https://www.googleapis.com/auth/admanager"
+    - "https://www.googleapis.com/auth/analytics.edit"
+    - "https://www.googleapis.com/auth/tagmanager.manage.accounts"
+    - "https://www.googleapis.com/auth/tagmanager.edit.containers"
+    - "https://www.googleapis.com/auth/tagmanager.edit.containerversions"
+    - "https://www.googleapis.com/auth/tagmanager.publish"
+  google_ads_mcc_only: true
+  hide_oauth_button_when_valid: true
+  require_manual_ads_terms_check: false
+  require_manual_gtm_preview_check: false
+  clarity:
+    project_id: "COLOQUE_PROJECT_ID_QUANDO_EXISTIR"
+    data_export_api_token: "COLOQUE_APENAS_NO_CONFIG_REAL"
+    mask_token_in_ui: true

@@ -11,7 +11,7 @@ Este repositorio nao contem senhas, tokens, banco real, cookies, credenciais OAu
 - Configuracao modelo.
 - Scripts de instalacao e validacao.
 - Google Ads Script modelo.
-- Documentacao de Ads, GAM, UTMs, agentes, refresh e troubleshooting.
+- Documentacao de setup inicial completo, Ads, GAM, UTMs, agentes, refresh e troubleshooting.
 - Exemplos fake para testar sem dados reais.
 
 ## Caminho rapido
@@ -45,9 +45,13 @@ http://127.0.0.1:8080
 - `config.example.yaml`: modelo de configuracao.
 - `schema.sql`: banco inicial vazio.
 - `google_ads_script/kaizen_google_ads_script.js`: script para copiar no Google Ads.
-- `docs/`: guias de implementacao.
+- `docs/`: guias de implementacao. Comece por `docs/01-SETUP-INICIAL.md`.
 - `scripts/`: validadores e utilitarios.
 - `examples/`: dados fake para teste.
+
+## Setup inicial completo
+
+O guia `docs/01-SETUP-INICIAL.md` descreve como automatizar Google Ads, GA4, GTM, WordPress/WPCode, Clarity API e checklist final sem expor dados sensiveis.
 
 ## Regra intrinseca
 
