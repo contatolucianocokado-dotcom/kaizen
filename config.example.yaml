@@ -2,32 +2,43 @@ app:
   name: "Kaizen"
   base_url: "https://seu-dominio.com"
   timezone: "America/Sao_Paulo"
-  api_token: "TROQUE_ESTE_TOKEN"
+  api_token: "${KAIZEN_API_TOKEN}"
   database_path: "roas_cache.sqlite3"
 
 google_ads:
-  developer_token: "COLOQUE_AQUI"
-  client_id: "COLOQUE_AQUI"
-  client_secret: "COLOQUE_AQUI"
-  refresh_token: "COLOQUE_AQUI"
-  login_customer_id: "0000000000"
+  developer_token: "${GOOGLE_ADS_DEVELOPER_TOKEN}"
+  client_id: "${GOOGLE_OAUTH_CLIENT_ID}"
+  client_secret: "${GOOGLE_OAUTH_CLIENT_SECRET}"
+  refresh_token: "${GOOGLE_OAUTH_REFRESH_TOKEN}"
+  login_customer_id: "SEU_MCC_ID"
   api_version: "v23"
+  fetch_all_accounts: true
   customers:
-    - customer_id: "0000000000"
+    - customer_id: "SEU_CUSTOMER_ID"
       name: "exemplo.com | PAIS"
       site: "exemplo.com"
 
 gam:
+  client_id: "${GOOGLE_OAUTH_CLIENT_ID}"
+  client_secret: "${GOOGLE_OAUTH_CLIENT_SECRET}"
+  refresh_token: "${GOOGLE_OAUTH_REFRESH_TOKEN}"
+  application_name: "Kaizen"
   networks:
-    - network_code: "00000000000"
+    - network_code: "SEU_NETWORK_CODE"
       name: "Exemplo GAM"
       site: "exemplo.com"
       currency: "BRL"
 
 projects:
   - site: "exemplo.com"
-    google_ads_customer_id: "0000000000"
-    gam_network_code: "00000000000"
+    google_ads_customer_id: "SEU_CUSTOMER_ID"
+    gam_network_code: "SEU_NETWORK_CODE"
+
+site_mapping:
+  exemplo.com: exemplo.com
+
+dashboard_projects:
+  - exemplo.com
 
 agents:
   enabled: true
@@ -54,6 +65,32 @@ setup_inicial:
   require_manual_ads_terms_check: false
   require_manual_gtm_preview_check: false
   clarity:
-    project_id: "COLOQUE_PROJECT_ID_QUANDO_EXISTIR"
-    data_export_api_token: "COLOQUE_APENAS_NO_CONFIG_REAL"
+    project_id: "${CLARITY_PROJECT_ID}"
+    data_export_api_token: "${CLARITY_DATA_EXPORT_TOKEN}"
     mask_token_in_ui: true
+
+campaign_builder:
+  enabled: true
+  require_destination_url_analysis: true
+  allow_model_account: true
+  allow_no_model: true
+  supported_types:
+    - SEARCH
+    - DEMAND_GEN
+    - PERFORMANCE_MAX
+
+sync:
+  recent_ads_source: "google_ads_script"
+  recent_gam_job: "sync_gam_today_fast.py"
+  full_sync_schedule: "daily"
+  prevent_overlap: true
+  fast_timeout_seconds: 480
+
+placements:
+  demand_gen_exclusions_enabled: false
+  require_human_approval: true
+
+telegram:
+  enabled: false
+  bot_token: "${TELEGRAM_BOT_TOKEN}"
+  chat_id: "${TELEGRAM_CHAT_ID}"

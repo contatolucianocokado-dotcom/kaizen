@@ -3,10 +3,10 @@
     {
       "day": "2026-01-01",
       "project": "demo-site.com",
-      "customer_id": "1234567890",
-      "campaign_id": "111222333",
+      "customer_id": "SEU_CUSTOMER_ID",
+      "campaign_id": "SEU_CAMPAIGN_ID",
       "campaign": "demo-site.com | DISPLAY | trafego | exemplo",
-      "attr_id": "111222333",
+      "attr_id": "SEU_ATTR_ID",
       "cost": 25.4,
       "clicks": 100,
       "impressions": 5000,

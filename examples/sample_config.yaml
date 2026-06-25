@@ -5,5 +5,5 @@ app:
 
 projects:
   - site: "demo-site.com"
-    google_ads_customer_id: "1234567890"
-    gam_network_code: "123456789"
+    google_ads_customer_id: "SEU_CUSTOMER_ID"
+    gam_network_code: "SEU_NETWORK_CODE"

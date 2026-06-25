@@ -10,6 +10,13 @@
 - `agente-campanhas-novas`: campanhas com investimento que ainda nao aparecem.
 - `agente-utm-attrid`: UTM, Attr ID e atribuicao.
 - `agente-aprendizado`: erros recorrentes, padroes e regras novas.
+- `agente-demand-gen`: integridade de grupos, canais e Attr ID por ad group.
+- `agente-display`: integridade por campaign ID.
+- `agente-search`: palavras-chave, anuncios, conversoes e investimento.
+- `agente-pmax`: assets, grupos e atribuicao por campaign ID.
+- `agente-placement`: canais irrelevantes e listas de exclusao.
+- `agente-campaign-builder`: qualidade e publicacao de campanhas.
+- `agente-setup-inicial`: Ads, GA4, GTM, WordPress e Clarity.
 
 ## Regra de atuacao
 
@@ -21,6 +28,8 @@ Todo agente deve:
 - Sugerir acao.
 - Validar depois da acao.
 - Aprender com erro repetido.
+- Bloquear automacao quando a fonte de dados estiver divergente.
+- Nunca executar acao de alto risco sem autoridade configurada.
 
 ## Regra central
 

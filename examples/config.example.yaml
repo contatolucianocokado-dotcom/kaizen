@@ -7,15 +7,15 @@ google_ads:
   client_id: "REDACTED"
   client_secret: "REDACTED"
   refresh_token: "REDACTED"
-  login_customer_id: "0000000000"
+  login_customer_id: "SEU_MCC_ID"
   customers:
-    - customer_id: "0000000000"
+    - customer_id: "SEU_CUSTOMER_ID"
       name: "site.com | PAIS"
       site: "site.com"
 
 gam:
   networks:
-    - network_code: "00000000000"
+    - network_code: "SEU_NETWORK_CODE"
       name: "GAM Site"
       site: "site.com"
       currency: "BRL"
@@ -25,4 +25,3 @@ site_mapping:
 
 dashboard_projects:
   - site.com
-

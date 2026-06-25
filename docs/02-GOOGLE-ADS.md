@@ -24,3 +24,8 @@ python scripts/healthcheck.py
 - Display/Search/PMAX usam Attr ID conforme a UTM recebida.
 - O sistema nao altera UTM.
 - Acoes de pausar, ativar, CPA e orcamento devem ser registradas com antes/depois.
+- Contas novas com investimento devem ser descobertas pela MCC configurada.
+- O investimento exibido deve fechar exatamente com o Google Ads por conta, dia e campanha.
+- Divergencia bloqueia decisao automatica baseada em ROI ate reconciliar.
+- O Apps Script deve enviar hoje; um job separado pode fechar ontem, 7 dias e mes.
+- Toda acao pendente precisa de `customer_id` para impedir aplicacao na conta errada.

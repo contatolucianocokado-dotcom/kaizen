@@ -20,6 +20,13 @@ Trazer receita, PMR, eCPM, blocos e placements por Attr ID.
 
 ## Validacao
 
+- Validar que o OAuth enxerga cada network configurado.
+- Conferir moeda individualmente por network.
+- Conferir receita por site e por Attr ID.
+- Nao distribuir receita geral entre campanhas sem evidencia.
+- PMR e eCPM devem ser calculados no mesmo nivel da receita.
+- Se a rede nao retornar linhas, mostrar dado indisponivel, nunca zero inventado.
+
 - Receita total do projeto deve bater com GAM.
 - Receita por campanha deve vir por `utm_campaign`.
 - Blocos devem abrir dentro da campanha.
