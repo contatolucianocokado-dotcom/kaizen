@@ -48,4 +48,3 @@ Qualquer atualizacao do GitHub deve ser feita por extracao segura: regra, docume
 5. Revisar `git diff --check`.
 6. Registrar a decisao no Graphify ou registro operacional.
 7. Publicar em branch `codex/*` e abrir PR para revisao.
-

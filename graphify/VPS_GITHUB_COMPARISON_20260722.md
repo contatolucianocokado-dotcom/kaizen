@@ -23,4 +23,3 @@ Tema: atualizacao segura do repositorio publico Kaizen
 
 Nao sincronizar a VPS em massa com o GitHub publico.
 Comparar primeiro, sanitizar depois e publicar apenas mudancas revisaveis em PR.
-
