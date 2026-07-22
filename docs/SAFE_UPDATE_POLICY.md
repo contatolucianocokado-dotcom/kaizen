@@ -30,3 +30,16 @@ Este repositorio deve ser tratado como versao sanitizada do Kaizen. Ele pode rec
 ## Regra de decisao
 
 Se um dado puder expor cliente, conta, token, receita sensivel, configuracao privada ou acesso operacional, ele nao deve entrar no GitHub.
+
+## Comparacao obrigatoria com a VPS
+
+Antes de atualizar o GitHub a partir da VPS:
+
+1. Identificar branch, HEAD e origin da VPS.
+2. Listar arquivos rastreados modificados e quantidade de arquivos nao rastreados.
+3. Comparar a estrutura da VPS com o repositorio publico alvo.
+4. Rodar scanner de segredos no material candidato.
+5. Publicar somente conteudo sanitizado.
+6. Registrar a decisao no Graphify ou registro operacional.
+
+Se a VPS apontar para outro origin, tiver muitos arquivos nao rastreados ou contiver backups/configuracoes locais, nao copiar em massa.
