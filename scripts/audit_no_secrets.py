@@ -10,6 +10,10 @@ PATTERNS = {
     "google_refresh_token": re.compile(r"\b1//[A-Za-z0-9_-]{20,}\b"),
     "jwt": re.compile(r"\beyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\b"),
     "ipv4_with_password_context": re.compile(r"(?i)(?:password|senha).{0,80}\b\d{1,3}(?:\.\d{1,3}){3}\b"),
+    "password_assignment": re.compile(r"(?i)\b(?:password|senha|secret|token|api[_-]?key)\b\s*[:=]\s*['\"]?[^'\"\s]{8,}"),
+    "wordpress_application_password": re.compile(r"\b[A-Za-z0-9]{4}\s+[A-Za-z0-9]{4}\s+[A-Za-z0-9]{4}\s+[A-Za-z0-9]{4}\s+[A-Za-z0-9]{4}\s+[A-Za-z0-9]{4}\b"),
+    "google_ads_customer_id_context": re.compile(r"(?i)\b(?:customer|cliente|conta|ads)\b.{0,40}\b\d{3}-\d{3}-\d{4}\b"),
+    "oauth_callback": re.compile(r"https?://(?:localhost|127\.0\.0\.1)(?::\d+)?/\?[^\\s]+code=4/"),
 }
 
 findings = []

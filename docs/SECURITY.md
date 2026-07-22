@@ -28,6 +28,9 @@
 - IP, senha ou chave SSH.
 - Cookies e sessoes de navegador.
 - IDs reais de contas e networks quando o repositorio for compartilhado como modelo.
+- Screenshots com emails, contas, tokens, network codes, customer IDs reais ou paineis privados.
+- Logs de Apps Script com token interno, payload privado ou URL assinada.
+- Backups, dumps, caches, exports CSV/JSON e arquivos temporarios com dados operacionais.
 
 ## Placeholders
 
@@ -49,3 +52,11 @@ python scripts/audit_no_secrets.py
 ```
 
 Se o script falhar, remova o dado, revogue a credencial exposta e gere outra.
+
+## Regra de atualizacao do GitHub
+
+- Atualizar o GitHub somente a partir de arvore limpa e revisada.
+- Nunca publicar a pasta operacional inteira.
+- Preferir documentacao, exemplos e codigo sanitizado.
+- Rodar auditoria de segredos antes de commit e push.
+- Se houver duvida sobre sensibilidade de um dado, nao publicar.
