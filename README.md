@@ -50,6 +50,7 @@ http://127.0.0.1:8080
 - `config.example.yaml`: modelo de configuracao.
 - `schema.sql`: banco inicial vazio.
 - `google_ads_script/kaizen_google_ads_script.js`: script para copiar no Google Ads.
+- `appwiz/`: camada operacional recuperada do `app.wiz`, ainda em consolidacao.
 - `docs/`: guias de implementacao. Comece por `docs/01-SETUP-INICIAL.md`.
 - `scripts/`: validadores e utilitarios.
 - `examples/`: dados fake para teste.

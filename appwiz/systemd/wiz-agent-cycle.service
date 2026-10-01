@@ -1,0 +1,10 @@
+[Unit]
+Description=Wiz agent cycle
+After=network.target wiz-roas-web.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/app.wizseoservicesaustralia.com/public_html
+EnvironmentFile=-/etc/wiz/agent-cycle.env
+ExecStart=/usr/bin/timeout --kill-after=10s 120 /usr/bin/curl -fsS -X POST -H X-Agent-Cycle-Token:${AGENT_CYCLE_TOKEN} http://127.0.0.1:8010/internal/agent-cycle
+TimeoutStartSec=140

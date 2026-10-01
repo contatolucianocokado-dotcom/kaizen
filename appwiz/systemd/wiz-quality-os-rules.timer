@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Wiz Quality OS rule validator hourly
+
+[Timer]
+OnCalendar=*-*-* *:17:00
+Persistent=true
+Unit=wiz-quality-os-rules.service
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,10 @@
+[Unit]
+Description=Wiz Quality OS rule validator
+After=wiz-roas-web.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/app.wizseoservicesaustralia.com/public_html
+ExecStart=/var/www/app.wizseoservicesaustralia.com/public_html/.venv/bin/python /var/www/app.wizseoservicesaustralia.com/public_html/scripts/validate_quality_os_rules.py
+StandardOutput=append:/var/www/app.wizseoservicesaustralia.com/public_html/logs/quality_os_rules.log
+StandardError=append:/var/www/app.wizseoservicesaustralia.com/public_html/logs/quality_os_rules.log

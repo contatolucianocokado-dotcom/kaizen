@@ -1,0 +1,10 @@
+[Unit]
+Description=Wiz agent authority policy enforcer
+After=wiz-roas-web.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/app.wizseoservicesaustralia.com/public_html
+ExecStart=/usr/bin/flock -n /tmp/wiz-agent-authority.lock /usr/bin/timeout 90 /var/www/app.wizseoservicesaustralia.com/public_html/.venv/bin/python /var/www/app.wizseoservicesaustralia.com/public_html/scripts/ensure_agent_authority.py
+StandardOutput=append:/var/www/app.wizseoservicesaustralia.com/public_html/logs/agent_authority.log
+StandardError=append:/var/www/app.wizseoservicesaustralia.com/public_html/logs/agent_authority.log

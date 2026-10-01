@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Wiz Google Ads tracking template audit every 2 hours
+
+[Timer]
+OnCalendar=*-*-* 0/2:47:00
+Persistent=true
+Unit=wiz-google-ads-tracking-template-audit.service
+
+[Install]
+WantedBy=timers.target

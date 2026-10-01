@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Wiz Google Ads spend validator hourly
+
+[Timer]
+OnCalendar=*-*-* *:32:00
+Persistent=true
+Unit=wiz-google-ads-spend-audit.service
+
+[Install]
+WantedBy=timers.target

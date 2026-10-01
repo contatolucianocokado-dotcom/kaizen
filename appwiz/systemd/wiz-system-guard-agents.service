@@ -1,0 +1,11 @@
+[Unit]
+Description=Wiz system guard agents
+After=network-online.target wiz-roas-web.service
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/app.wizseoservicesaustralia.com/public_html
+ExecStart=/usr/bin/flock -n /tmp/wiz-system-guard-agents.lock /usr/bin/timeout 240 /var/www/app.wizseoservicesaustralia.com/public_html/.venv/bin/python /var/www/app.wizseoservicesaustralia.com/public_html/scripts/run_system_guard_agents.py
+StandardOutput=append:/var/www/app.wizseoservicesaustralia.com/public_html/logs/system_guard_agents.log
+StandardError=append:/var/www/app.wizseoservicesaustralia.com/public_html/logs/system_guard_agents.log
