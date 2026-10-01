@@ -10,6 +10,9 @@ PATTERNS = {
     "google_refresh_token": re.compile(r"\b1//[A-Za-z0-9_-]{20,}\b"),
     "jwt": re.compile(r"\beyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\b"),
     "ipv4_with_password_context": re.compile(r"(?i)(?:password|senha).{0,80}\b\d{1,3}(?:\.\d{1,3}){3}\b"),
+    "hardcoded_agent_token": re.compile(r"X-Agent-Cycle-Token:[A-Za-z0-9_-]{24,}"),
+    "google_api_key": re.compile(r"\bAIza[A-Za-z0-9_-]{20,}\b"),
+    "google_access_token": re.compile(r"\bya29\.[A-Za-z0-9_-]{20,}\b"),
 }
 
 findings = []

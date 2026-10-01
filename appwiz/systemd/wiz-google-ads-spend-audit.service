@@ -1,0 +1,9 @@
+[Unit]
+Description=Wiz Google Ads spend validator
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/app.wizseoservicesaustralia.com/public_html
+ExecStart=/var/www/app.wizseoservicesaustralia.com/public_html/.venv/bin/python /var/www/app.wizseoservicesaustralia.com/public_html/scripts/validate_google_ads_platform_spend.py --days 2
+User=root

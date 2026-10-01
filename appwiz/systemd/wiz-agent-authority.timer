@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Wiz agent authority policy enforcer hourly
+
+[Timer]
+OnCalendar=*-*-* *:09:00
+Persistent=true
+Unit=wiz-agent-authority.service
+
+[Install]
+WantedBy=timers.target

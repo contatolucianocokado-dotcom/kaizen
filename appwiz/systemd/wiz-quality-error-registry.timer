@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Wiz Quality Error Registry sync every 10 minutes
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=10min
+Persistent=true
+Unit=wiz-quality-error-registry.service
+
+[Install]
+WantedBy=timers.target

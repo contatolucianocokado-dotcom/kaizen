@@ -1,0 +1,10 @@
+[Unit]
+Description=Wiz Push GAM reconciliation
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/app.wizseoservicesaustralia.com/public_html
+ExecStart=/var/www/app.wizseoservicesaustralia.com/public_html/.venv/bin/python /var/www/app.wizseoservicesaustralia.com/public_html/scripts/reconcile_push_gam_metrics.py --db-path /var/www/app.wizseoservicesaustralia.com/public_html/roas_cache.sqlite3 --output /var/www/app.wizseoservicesaustralia.com/public_html/outputs/wiz-push-gam-reconciliation-latest.json
+User=root

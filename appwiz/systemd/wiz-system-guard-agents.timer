@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Wiz system guard agents hourly
+
+[Timer]
+OnCalendar=*-*-* *:12:00
+Persistent=true
+Unit=wiz-system-guard-agents.service
+
+[Install]
+WantedBy=timers.target

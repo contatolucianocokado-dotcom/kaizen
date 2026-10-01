@@ -1,0 +1,10 @@
+[Unit]
+Description=Run Wiz agent cycle every 5 minutes
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=5min
+Unit=wiz-agent-cycle.service
+
+[Install]
+WantedBy=timers.target

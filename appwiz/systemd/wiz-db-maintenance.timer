@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Wiz DB runtime maintenance daily
+
+[Timer]
+OnCalendar=*-*-* 03:20:00
+Persistent=true
+RandomizedDelaySec=5min
+Unit=wiz-db-maintenance.service
+
+[Install]
+WantedBy=timers.target

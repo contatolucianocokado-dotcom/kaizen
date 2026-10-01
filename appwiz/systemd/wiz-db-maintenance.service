@@ -1,0 +1,13 @@
+[Unit]
+Description=Wiz DB runtime maintenance
+After=wiz-roas-web.service
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/var/www/app.wizseoservicesaustralia.com/public_html
+ExecStart=/usr/bin/flock -n /tmp/wiz-db-maintenance.lock /usr/bin/timeout --kill-after=30s 25m /usr/bin/ionice -c2 -n7 /usr/bin/nice -n 15 /var/www/app.wizseoservicesaustralia.com/public_html/.venv/bin/python scripts/maintenance_prune_runtime_tables.py --db roas_cache.sqlite3
+MemoryMax=1200M
+CPUWeight=20
+IOSchedulingClass=best-effort
+IOSchedulingPriority=7

@@ -1,0 +1,10 @@
+[Unit]
+Description=Wiz Quality Error Registry sync
+After=wiz-roas-web.service
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/app.wizseoservicesaustralia.com/public_html
+ExecStart=/usr/bin/flock -n /tmp/wiz-quality-error-registry.lock /usr/bin/timeout 180 /var/www/app.wizseoservicesaustralia.com/public_html/.venv/bin/python /var/www/app.wizseoservicesaustralia.com/public_html/scripts/sync_quality_error_registry.py
+StandardOutput=append:/var/www/app.wizseoservicesaustralia.com/public_html/logs/quality_error_registry.log
+StandardError=append:/var/www/app.wizseoservicesaustralia.com/public_html/logs/quality_error_registry.log

@@ -1,0 +1,9 @@
+[Unit]
+Description=Wiz Google Ads tracking template audit
+After=network.target
+
+[Service]
+Type=oneshot
+WorkingDirectory=/var/www/app.wizseoservicesaustralia.com/public_html
+ExecStart=/var/www/app.wizseoservicesaustralia.com/public_html/.venv/bin/python /var/www/app.wizseoservicesaustralia.com/public_html/scripts/audit_fix_google_ads_tracking_templates.py
+User=root

@@ -24,3 +24,7 @@ roas_cache.sqlite3
 __pycache__/
 *.pyc
 .venv/
+logs/
+quality-runs/
+operational-db/
+*.runtime.json
